@@ -1,9 +1,8 @@
 //
 //  ViewController.swift
-//  SpotCrime
+//  RockfordCrimeMap
 //
-//  Created by Nilesh on 1/16/16.
-//  Copyright © 2016 CA. All rights reserved.
+//  Created by CHuck Konkol
 //
 
 import UIKit
@@ -22,19 +21,13 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     var crimedate:String!
     var currentValue:Int!
     @IBOutlet weak var DateSlider: UISlider!
-
-    
-    
     var myloc:CLLocation = CLLocation()
 
-    
-    @IBAction func DateSlider(sender: UISlider) {
-        
-        if sender.
-        currentValue = Int(sender.value)
-              //Get Date
+    @IBAction func DateSliderUp(sender: UISlider) {
+         currentValue = Int(sender.value)
+        //Get Date
         let now = NSDate()
-              mapView.removeAnnotations(mapView.annotations)
+        mapView.removeAnnotations(mapView.annotations)
         var i = 1
         while i <= currentValue {
             
@@ -44,11 +37,15 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let newDates = dateFormatter.stringFromDate(calculatedDate!)
             crimedate = newDates
-             loadDataFromSODAApi()
+            loadDataFromSODAApi()
             i = i + 1
         }
-        // loadDataFromSODAApi()
-       lblCrimeRange.text = "\(currentValue) Day"
+ 
+    }
+    
+    @IBAction func DateSlider(sender: UISlider) {
+       currentValue = Int(sender.value)
+       lblCrimeRange.text = "\(currentValue) Days Ago Until Now."
     }
     
     
@@ -120,8 +117,6 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
     }
     
-    
-  
 
     //Load data from endpoint given
     func loadDataFromSODAApi(){

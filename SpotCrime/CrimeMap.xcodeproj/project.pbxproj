@@ -57,13 +57,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		C40888C21C4B726100141BD7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		C45ACFC61C4AF21500B35AD6 = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				C45ACFD21C4AF21500B35AD6 /* AppDelegate.swift */,
-				C40888C21C4B726100141BD7 /* Views */,
 				C40888C01C4B724700141BD7 /* ViewController */,
 				C40888C11C4B725300141BD7 /* Resources */,
 			);

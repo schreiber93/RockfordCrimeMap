@@ -1,9 +1,8 @@
 //
-//  DataPoints.swift
-//  SpotCrime
+//  ViewController.swift
+//  RockfordCrimeMap
 //
-//  Created by Nilesh on 1/16/16.
-//  Copyright © 2016 CA. All rights reserved.
+//  Created by CHuck Konkol
 //
 
 import UIKit
@@ -29,18 +28,15 @@ class DataPoints: NSObject,MKAnnotation{
            // var error: NSError?
                var latitude:Double = 0.0
             var longitude:Double = 0.0
-                //let address:String! = dataDictionary["address"] as! String
-               // let category:String! = dataDictionary["crime_against"] as! String
-                //let date:String! = dataDictionary["date"] as! String
-                //let descript:String! = dataDictionary["offense_description"] as! String
+        
          let date:String! = dataDictionary["occurred_on_date"] as! String
          let time:String! = dataDictionary["occurred_on_time"] as! String
         ////
         
-        do {
-            let location:NSDictionary! = try dataDictionary.objectForKey("geom") as! NSDictionary!
+        
+            let location:NSDictionary! = dataDictionary.objectForKey("geom") as! NSDictionary!
             if location != nil{
-                let type:String! = try location.objectForKey("type") as! String!
+                let type:String! = location.objectForKey("type") as! String!
             if type == "Point"
             {
                 let coordinates:NSArray! = location.objectForKey("coordinates") as! NSArray
@@ -49,13 +45,8 @@ class DataPoints: NSObject,MKAnnotation{
             }
 
             }
-                    }
-        catch let error as NSError {
-            print(error.localizedDescription)
-        }
-        
-                        //////
-
+            
+      
                 let pddDistrict = dataDictionary["offense_description"] as! String
         
                 let titleForPoint:String! = "\(date):\(time)"
