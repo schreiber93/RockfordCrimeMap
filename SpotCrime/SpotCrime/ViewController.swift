@@ -29,6 +29,8 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
 
     
     @IBAction func DateSlider(sender: UISlider) {
+        
+        if sender.
         currentValue = Int(sender.value)
               //Get Date
         let now = NSDate()

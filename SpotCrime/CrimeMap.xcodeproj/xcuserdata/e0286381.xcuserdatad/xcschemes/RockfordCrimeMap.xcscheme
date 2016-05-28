@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C45ACFCE1C4AF21500B35AD6"
-               BuildableName = "RockfordCrimeMap.app"
+               BuildableName = "CrimeMap.app"
                BlueprintName = "CrimeMap"
                ReferencedContainer = "container:CrimeMap.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C45ACFCE1C4AF21500B35AD6"
-            BuildableName = "RockfordCrimeMap.app"
+            BuildableName = "CrimeMap.app"
             BlueprintName = "CrimeMap"
             ReferencedContainer = "container:CrimeMap.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C45ACFCE1C4AF21500B35AD6"
-            BuildableName = "RockfordCrimeMap.app"
+            BuildableName = "CrimeMap.app"
             BlueprintName = "CrimeMap"
             ReferencedContainer = "container:CrimeMap.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C45ACFCE1C4AF21500B35AD6"
-            BuildableName = "RockfordCrimeMap.app"
+            BuildableName = "CrimeMap.app"
             BlueprintName = "CrimeMap"
             ReferencedContainer = "container:CrimeMap.xcodeproj">
          </BuildableReference>
