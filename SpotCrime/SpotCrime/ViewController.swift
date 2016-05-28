@@ -5,23 +5,32 @@
 //  Created by CHuck Konkol
 //
 
+//1 Imports
 import UIKit
 import MapKit
 import Foundation
 
+//2 Add MKMapViewDelegate,CLLocationManagerDelegate to viewcontroller
 class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
     //IBOutlets
+
+//3 Create Outlets
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var mapView: MKMapView!
-  
-    //
+    @IBOutlet weak var lblCrimeRange: UILabel!
+    @IBOutlet weak var DateSlider: UISlider!
+
+//4 Create Variables
     private var locationManager = CLLocationManager()
     private var dataPoints:[DataPoints] = [DataPoints]()
-    @IBOutlet weak var lblCrimeRange: UILabel!
     var crimedate:String!
     var currentValue:Int!
-    @IBOutlet weak var DateSlider: UISlider!
     var myloc:CLLocation = CLLocation()
+    let startLocation = CLLocation(latitude: 42.306713, longitude: -88.989403	)
+    //The distance mentioned is in meters.
+    let initialRadius:CLLocationDistance = 20000
+
+//5 DateSlider determines how far back to get crime json and display on map
 
     @IBAction func DateSliderUp(sender: UISlider) {
          currentValue = Int(sender.value)
@@ -43,15 +52,14 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
  
     }
     
+//6 Date on label
+    
     @IBAction func DateSlider(sender: UISlider) {
        currentValue = Int(sender.value)
        lblCrimeRange.text = "\(currentValue) Days Ago Until Now."
     }
     
-    
-        //MARK: Initialization
-    //Center point of the starting location. //Setting this to be San Fransisco.
-    
+
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
         myloc = location
@@ -62,24 +70,20 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         self.mapView.setRegion(region, animated: true)
     }
     
-   let startLocation = CLLocation(latitude: 42.306713, longitude: -88.989403	)
-    //The distance mentioned is in meters.
-    let initialRadius:CLLocationDistance = 20000
-
+//7 When App loads
     //MARK: View Controller Methods.
     override func viewDidLoad() {
         super.viewDidLoad()
       //GET DATE
          let now = NSDate()
         let calculatedDate = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: -1, toDate: now, options: NSCalendarOptions.init(rawValue: 0))
-        
+      //Formate Date
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let newDates = dateFormatter.stringFromDate(calculatedDate!)
         crimedate = newDates
         
         centerMapOnLocation(startLocation)
-      //  centerMapOnLocation(myloc)
         checkLocationAuthorizationStatus()
         mapView.delegate = self
       
@@ -87,15 +91,14 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         setUpNavigationBar()
         mapView.showsUserLocation = true
     }
-    
+//8 Needed to update location when user moves
     func mapView(mapView: MKMapView, didUpdateUserLocation
         userLocation: MKUserLocation) {
         mapView.centerCoordinate = userLocation.location!.coordinate
     }
+
+//9 Confirm user gives access to location
     
-   
-    
-  
     //MARK: Setup Methods
     //Check the location Authorization
     func checkLocationAuthorizationStatus() {
@@ -112,11 +115,14 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         mapView.setRegion(coordinateRegion, animated: true)
     }
 
+//10 Nav Bar Color
     func setUpNavigationBar(){
         self.navigationBar.barTintColor = UIColor.redColor()
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
     }
+
     
+//11 Load Data from JSON
 
     //Load data from endpoint given
     func loadDataFromSODAApi(){

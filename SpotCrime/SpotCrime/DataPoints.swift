@@ -5,10 +5,12 @@
 //  Created by CHuck Konkol
 //
 
+// 1 Imports
 import UIKit
 import MapKit
 import Contacts
 
+// 2 NSOBJECT CLASS, ADD MKANNOTATION
 class DataPoints: NSObject,MKAnnotation{
 
     let title:String?
@@ -23,7 +25,8 @@ class DataPoints: NSObject,MKAnnotation{
         self.coordinate = coordinate
         super.init()
     }
-
+    
+//3 Render JSON data for each location
     class func fromDataArray(dataDictionary:NSDictionary!)->DataPoints?{
            // var error: NSError?
                var latitude:Double = 0.0
@@ -55,6 +58,8 @@ class DataPoints: NSObject,MKAnnotation{
        
             return DataPoints.init(title: titleForPoint, locationName: subtitleForPoint, district: pddDistrict, coordinate: location2d)
     }
+    
+//4 Location Name
     
     var subtitle:String?{
         return locationName
