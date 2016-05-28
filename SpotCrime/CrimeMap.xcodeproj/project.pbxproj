@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		C40888B81C4B09B300141BD7 /* DataPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPoints.swift; sourceTree = "<group>"; };
-		C45ACFCF1C4AF21500B35AD6 /* RockfordCrimeMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockfordCrimeMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C45ACFCF1C4AF21500B35AD6 /* CrimeMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrimeMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45ACFD21C4AF21500B35AD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C45ACFD41C4AF21500B35AD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C45ACFD71C4AF21500B35AD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		C45ACFD01C4AF21500B35AD6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C45ACFCF1C4AF21500B35AD6 /* RockfordCrimeMap.app */,
+				C45ACFCF1C4AF21500B35AD6 /* CrimeMap.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +94,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C45ACFCE1C4AF21500B35AD6 /* RockfordCrimeMap */ = {
+		C45ACFCE1C4AF21500B35AD6 /* CrimeMap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C45ACFE11C4AF21500B35AD6 /* Build configuration list for PBXNativeTarget "RockfordCrimeMap" */;
+			buildConfigurationList = C45ACFE11C4AF21500B35AD6 /* Build configuration list for PBXNativeTarget "CrimeMap" */;
 			buildPhases = (
 				C45ACFCB1C4AF21500B35AD6 /* Sources */,
 				C45ACFCC1C4AF21500B35AD6 /* Frameworks */,
@@ -106,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = RockfordCrimeMap;
+			name = CrimeMap;
 			productName = SpotCrime;
-			productReference = C45ACFCF1C4AF21500B35AD6 /* RockfordCrimeMap.app */;
+			productReference = C45ACFCF1C4AF21500B35AD6 /* CrimeMap.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +127,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C45ACFCA1C4AF21500B35AD6 /* Build configuration list for PBXProject "RockfordCrimeMap" */;
+			buildConfigurationList = C45ACFCA1C4AF21500B35AD6 /* Build configuration list for PBXProject "CrimeMap" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -140,7 +140,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C45ACFCE1C4AF21500B35AD6 /* RockfordCrimeMap */,
+				C45ACFCE1C4AF21500B35AD6 /* CrimeMap */,
 			);
 		};
 /* End PBXProject section */
@@ -277,31 +277,31 @@
 		C45ACFE21C4AF21500B35AD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SpotCrime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rockvalley.rockfordcrimemap;
-				PRODUCT_NAME = RockfordCrimeMap;
+				PRODUCT_NAME = CrimeMap;
 			};
 			name = Debug;
 		};
 		C45ACFE31C4AF21500B35AD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SpotCrime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rockvalley.rockfordcrimemap;
-				PRODUCT_NAME = RockfordCrimeMap;
+				PRODUCT_NAME = CrimeMap;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C45ACFCA1C4AF21500B35AD6 /* Build configuration list for PBXProject "RockfordCrimeMap" */ = {
+		C45ACFCA1C4AF21500B35AD6 /* Build configuration list for PBXProject "CrimeMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C45ACFDF1C4AF21500B35AD6 /* Debug */,
@@ -310,7 +310,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C45ACFE11C4AF21500B35AD6 /* Build configuration list for PBXNativeTarget "RockfordCrimeMap" */ = {
+		C45ACFE11C4AF21500B35AD6 /* Build configuration list for PBXNativeTarget "CrimeMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C45ACFE21C4AF21500B35AD6 /* Debug */,
