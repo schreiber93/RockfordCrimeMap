@@ -1,4 +1,4 @@
-# SpotCrime
+# RockfordCrimeMap
 An App that reports the crime in Rockford, IL  
 
 **Stories Completed**  
